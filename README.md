@@ -1,9 +1,12 @@
 MongoDB Bookstore Assignment
+
 📖 Overview
+
 
 This assignment demonstrates how to design, populate, and query a MongoDB database using the insert_books.js script. The database stores information about books, including details such as title, author, genre, price, and stock availability. The tasks cover CRUD operations, advanced queries, aggregation pipelines, and indexing to improve query performance.
 
-🛠️ Setup Instructions
+
+Setup Instructions
 
 Install MongoDB locally or connect to a MongoDB Atlas cluster.
 
@@ -20,6 +23,7 @@ node insert_books.js
 This will insert at least 10 book documents into the plp_bookstore database, inside the books collection.
 
 Database Schema
+
 
 Each book document has the following fields:
 
@@ -39,7 +43,8 @@ pages (number) → Total number of pages
 
 publisher (string) → Name of publisher
 
-📝 Task 2: Basic Queries
+
+ Task 2: Basic Queries
 
 Find all books in a specific genre:
 
@@ -65,7 +70,8 @@ Delete a book by its title:
 
 db.books.deleteOne({ title: "The Hobbit" })
 
-📝 Task 3: Advanced Queries
+
+ Task 3: Advanced Queries
 
 Find books in stock and published after 2010:
 
@@ -97,7 +103,8 @@ db.books.find().limit(5)
 // Page 2
 db.books.find().skip(5).limit(5)
 
-📝 Task 4: Aggregation Pipeline
+
+ Task 4: Aggregation Pipeline
 
 Average price of books by genre:
 
@@ -123,7 +130,8 @@ db.books.aggregate([
   { $sort: { _id: 1 } }
 ])
 
-📝 Task 5: Indexing
+
+Task 5: Indexing
 
 Create an index on the title field:
 
